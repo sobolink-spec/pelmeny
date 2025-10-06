@@ -1,0 +1,41 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  transition: background-color 0.5s;
+}
+
+#counter {
+  font-size: 80px;
+  color: black;
+  margin-bottom: 40px;
+  transition: color 0.5s;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#plus { background-color: lightgreen; }
+#minus { background-color: lightcoral; }
+#reset { background-color: lightgray; }
