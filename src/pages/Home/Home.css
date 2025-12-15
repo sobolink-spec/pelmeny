@@ -1,0 +1,14 @@
+.home {
+  text-align: center;
+}
+
+.featured {
+  margin-top: 2rem;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
