@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './ProductCard.css';
+import './ProductDetail.css';
 
 const ProductCard = ({ product, addToCart }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -38,7 +38,7 @@ const ProductCard = ({ product, addToCart }) => {
         </div>
         
         <p className="product-description">
-          {product.description.substring(0, 100)}...
+          {product.description ? product.description.substring(0, 100) + '...' : 'Нет описания'}
         </p>
         
         {/* Рейтинг */}

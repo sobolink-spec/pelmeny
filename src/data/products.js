@@ -2,13 +2,13 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const products = [
   {
-    id: uuidv4(),
+    id: 1,
     name: 'ASUS ROG Strix G17',
     category: 'Ноутбуки',
     price: 149990,
     discount: 10,
     rating: 4.8,
-    image: 'https://via.placeholder.com/400x300/ff4655/ffffff?text=ROG+Strix',
+    image: 'gamer-shop/img/id_1.png',
     description: 'Игровой ноутбук с процессором Intel Core i9 и видеокартой NVIDIA RTX 4070',
     specs: [
       'Процессор: Intel Core i9-13900H',
@@ -20,13 +20,13 @@ export const products = [
     inStock: true
   },
   {
-    id: uuidv4(),
+    id: 2,
     name: 'Razer DeathAdder V3 Pro',
     category: 'Мыши',
     price: 12990,
     discount: 15,
     rating: 4.9,
-    image: 'https://via.placeholder.com/400x300/00ff9d/000000?text=Razer',
+    image: 'gamer-shop/img/id_2.png',
     description: 'Беспроводная игровая мышь с оптическим сенсором 30K DPI',
     specs: [
       'DPI: 30000',
@@ -38,13 +38,13 @@ export const products = [
     inStock: true
   },
   {
-    id: uuidv4(),
+    id: 3,
     name: 'Logitech G Pro X',
     category: 'Клавиатуры',
     price: 15990,
     discount: 0,
     rating: 4.7,
-    image: 'https://via.placeholder.com/400x300/0088ff/ffffff?text=Logitech',
+    image: 'gamer-shop/img/id_3.png',
     description: 'Механическая клавиатура с переключателями GX Blue',
     specs: [
       'Тип: Механическая',
@@ -56,13 +56,13 @@ export const products = [
     inStock: true
   },
   {
-    id: uuidv4(),
+    id: 4,
     name: 'NVIDIA RTX 4090',
     category: 'Видеокарты',
     price: 199990,
     discount: 5,
     rating: 4.9,
-    image: 'https://via.placeholder.com/400x300/76b900/ffffff?text=RTX+4090',
+    image: 'gamer-shop/img/id_4.png',
     description: 'Флагманская видеокарта для игр в 4K',
     specs: [
       'Память: 24GB GDDR6X',
@@ -74,13 +74,13 @@ export const products = [
     inStock: false
   },
   {
-    id: uuidv4(),
+    id: 5,
     name: 'AMD Ryzen 9 7950X',
     category: 'Процессоры',
     price: 79990,
     discount: 8,
     rating: 4.8,
-    image: 'https://via.placeholder.com/400x300/ed1c24/ffffff?text=Ryzen+9',
+    image: 'gamer-shop/img/id_5.png',
     description: '16-ядерный процессор для геймеров и создателей контента',
     specs: [
       'Ядра: 16',
@@ -92,13 +92,13 @@ export const products = [
     inStock: true
   },
   {
-    id: uuidv4(),
+    id: 6,
     name: 'Samsung Odyssey G9',
     category: 'Мониторы',
     price: 99990,
     discount: 12,
     rating: 4.6,
-    image: 'https://via.placeholder.com/400x300/1428a0/ffffff?text=Odyssey',
+    image: 'gamer-shop/img/id_6.png',
     description: 'Игровой монитор с изогнутым экраном 49"',
     specs: [
       'Размер: 49"',
@@ -110,13 +110,13 @@ export const products = [
     inStock: true
   },
   {
-    id: uuidv4(),
+    id: 7,
     name: 'SteelSeries Arctis Nova Pro',
     category: 'Гарнитуры',
     price: 29990,
     discount: 10,
     rating: 4.7,
-    image: 'https://via.placeholder.com/400x300/ff6900/ffffff?text=SteelSeries',
+    image: 'gamer-shop/img/id_7.png',
     description: 'Беспроводная игровая гарнитура с активным шумоподавлением',
     specs: [
       'Аккумулятор: 22ч',
@@ -128,13 +128,13 @@ export const products = [
     inStock: true
   },
   {
-    id: uuidv4(),
+    id: 8,
     name: 'HyperX QuadCast S',
     category: 'Микрофоны',
     price: 14990,
     discount: 0,
     rating: 4.5,
-    image: 'https://via.placeholder.com/400x300/000000/ffffff?text=HyperX',
+    image: 'gamer-shop/img/id_8.png',
     description: 'USB-микрофон с RGB подсветкой для стриминга',
     specs: [
       'Тип: Конденсаторный',
