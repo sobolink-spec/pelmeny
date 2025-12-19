@@ -4,9 +4,10 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Catalog from './pages/Catalog/Catalog';
-import ProductCard from './pages/ProductCard/ProductCard';
+import ProductDetail from './pages/ProductDetail/ProductDetail';
 import About from './pages/About/About';
 import Cart from './components/Cart/Cart';
+import Modal from './components/Modal/Modal';
 import './App.css';
 
 function App() {
