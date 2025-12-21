@@ -1,70 +1,178 @@
-# Getting Started with Create React App
+# Gamer Shop — интернет-магазин игровых устройств 🎮
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Коротко:** небольшой фронтенд-магазин, сделанный на React (Create React App). В проекте есть каталог товаров, страница товара, корзина и простая навигация.
 
-## Available Scripts
+> 📌 Эта документация — русская версия, адаптированная под текущую структуру проекта.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Оглавление
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Возможности](#возможности-✨)
+- [Демо / Скриншоты](#демо--скриншоты-🖼️)
+- [Требования](#требования-⚙️)
+- [Установка и запуск](#установка-и-запуск-▶️)
+- [Скрипты](#скрипты-🛠️)
+- [Структура проекта](#структура-проекта-📁)
+- [Компоненты и страницы](#компоненты-и-страницы-🧩)
+- [Данные товаров](#данные-товаров-📦)
+- [Тесты и lint](#тесты-и-lint-✅)
+- [Contributing](#contributing-🤝)
+- [Лицензия](#лицензия-📄)
+- [Контакты](#контакты-✉️)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Возможности ✨
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Список товаров с категориями и фильтрами
+- Страница товара с описанием и характеристиками
+- Корзина с добавлением/удалением товаров
+- Адаптивная разметка и базовая навигация (React Router)
 
-### `npm run build`
+## Демо / Скриншоты 🖼️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Примеры картинок товаров находятся в папке `img/`:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](./img/id_1.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Добавьте свои скриншоты в `img/` и вставьте их здесь при необходимости.
 
-### `npm run eject`
+## Требования ⚙️
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Node.js 16+ (рекомендуется)
+- npm (или yarn)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Установка и запуск ▶️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Клонировать репозиторий
+git clone <repo-url>
+cd gamer-shop
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Установить зависимости
+npm install
 
-## Learn More
+# Запустить в режиме разработки
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Собрать production-версию
+npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Запустить тесты
+npm test
+```
 
-### Code Splitting
+Апп откроется по умолчанию на http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Скрипты 🛠️
 
-### Analyzing the Bundle Size
+Скрипты взяты из `package.json`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `npm start` — запуск dev-сервера (react-scripts start)
+- `npm run build` — сборка в production (react-scripts build)
+- `npm test` — запуск тестов (react-scripts test)
+- `npm run eject` — извлечь конфигурацию CRA (однонаправленная операция)
 
-### Making a Progressive Web App
+## Структура проекта 📁
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Ключевые папки и файлы:
 
-### Advanced Configuration
+- `public/` — статические файлы (index.html, favicon и т.д.)
+- `src/` — исходный код приложения
+  - `App.jsx` — корневой компонент
+  - `index.js` — точка входа
+  - `src/data/products.js` — тестовые данные товаров
+  - `src/components/` — переиспользуемые компоненты (Header, Footer, Cart, Modal)
+  - `src/pages/` — страницы (Home, Catalog, ProductDetail, About)
+  - `src/App.css`, `src/index.css` — базовые стили
+- `img/` — изображения товаров (используются в `products.js`)
+- `package.json` — зависимости и скрипты
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Компоненты и страницы 🧩
 
-### Deployment
+Краткое описание наиболее важных компонентов:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `Header` — навигация и логотип
+- `Footer` — подвал сайта
+- `Cart` — корзина, отображает добавленные товары и общую сумму
+- `Modal` — модальные окна (подтверждение действий и т.д.)
 
-### `npm run build` fails to minify
+Страницы:
+- `Home` — главная страница с подборкой товаров
+- `Catalog` — список товаров с фильтрами и категориями
+- `ProductDetail` — подробная страница товара
+- `About` — информация о проекте
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Данные товаров 📦
+
+Данные лежат в `src/data/products.js`. Пример объекта товара:
+
+```js
+{
+  id: 1,
+  name: 'ASUS ROG Strix G17',
+  category: 'Ноутбуки',
+  price: 149990,
+  discount: 10,
+  rating: 4.8,
+  image: 'gamer-shop/img/id_1.png',
+  description: 'Игровой ноутбук...',
+  specs: ['Процессор: ...', 'Видеокарта: ...'],
+  inStock: true
+}
+```
+
+Если нужно — можно вынести данные на бэкенд или подключить mock-API.
+
+## Как устроена логика корзины 🧾
+
+Логика корзины реализована в `src/App.jsx`. Ключевые функции:
+
+- `addToCart(product)` — добавляет товар в корзину, увеличивает количество если товар уже есть, и показывает модальное подтверждение.
+- `removeFromCart(productId)` — удаляет товар по id.
+- `updateQuantity(productId, quantity)` — изменяет количество единиц товара.
+- `calculateTotal()` — подсчитывает итоговую сумму.
+
+Корзина сохраняется в `localStorage` (эффекты в `useEffect`), поэтому её содержимое сохраняется между сеансами.
+
+Пример (упрощённо):
+
+```js
+const addToCart = (product) => {
+  setCartItems(prev => {
+    const existing = prev.find(i => i.id === product.id);
+    if (existing) return prev.map(i => i.id === product.id ? { ...i, quantity: i.quantity + 1 } : i);
+    return [...prev, { ...product, quantity: 1 }];
+  });
+};
+```
+
+## Тесты и lint ✅
+
+Проект содержит `App.test.jsx` и стандартную конфигурацию CRA для тестирования (Jest + React Testing Library).
+
+ESLint конфиг находится в `package.json` и использует правила `react-app`.
+
+## Contributing 🤝
+
+Пожалуйста, смотрите `CONTRIBUTING.md` для правил работы с репозиторием (fork → branch → PR). Будьте внимательны к стилю кода и добавляйте тесты для новых фич.
+
+## Лицензия 📄
+
+Лицензия не указана в проекте. Если вы хотите — я могу добавить `LICENSE` (например, MIT) по вашему разрешению.
+
+## Контакты ✉️
+
+**Автор:** укажите ваше имя и контакт (например: email), например `author@example.com`.
+
+Если хотите, я могу добавить шаблон для связи (issue template) или страницу с информацией об авторах.
+
+---
+
+Если хотите, могу дополнительно:
+- Добавить шаблон PR и issue
+- Развернуть простой mock-API для товаров
+- Создать подробную `docs/components.md` с описанием props и примерами использования
+
+Готов продолжить — какой следующий шаг предпочитаете? ✅
